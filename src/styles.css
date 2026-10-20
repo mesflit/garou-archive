@@ -633,3 +633,63 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Fix: mobile bottom navigation overflow */
+.mobile-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+
+  padding-left: max(8px, env(safe-area-inset-left, 0px));
+  padding-right: max(8px, env(safe-area-inset-right, 0px));
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.mobile-nav > *,
+.mobile-nav button,
+.mobile-nav a {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 380px) {
+  .mobile-nav {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .mobile-nav > *,
+  .mobile-nav button,
+  .mobile-nav a {
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 11px;
+  }
+
+  .mobile-nav svg {
+    max-width: 18px;
+  }
+}
+
+body {
+  overflow-x: clip;
+}
