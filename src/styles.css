@@ -203,3 +203,433 @@ footer a svg { width: 12px; height: 12px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+
+
+
+
+
+
+/* ========================================
+   Garou Archive — Responsive Design
+   Phone, Tablet, Laptop & Desktop
+   ======================================== */
+
+img,
+video {
+  max-width: 100%;
+}
+
+button,
+a,
+input,
+select {
+  touch-action: manipulation;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #a99aff;
+  outline-offset: 3px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+main,
+.topbar,
+footer {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero-copy,
+.section-heading > div,
+.viewer-details,
+.viewer-title {
+  min-width: 0;
+}
+
+.hero h1,
+.section-heading h2,
+.viewer-title h3 {
+  overflow-wrap: anywhere;
+}
+
+.media-card,
+.media-open,
+.media-visual {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.viewer {
+  height: 100vh;
+  height: 100dvh;
+  box-sizing: border-box;
+}
+
+.viewer-content {
+  min-width: 0;
+  min-height: 0;
+}
+
+.viewer-content img,
+.viewer-content video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.mobile-nav {
+  padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+}
+
+/* Büyük masaüstü ekranlar */
+@media (min-width: 1600px) {
+  .topbar,
+  main,
+  footer {
+    max-width: 1480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .media-grid {
+    columns: 5 230px;
+    column-gap: 18px;
+  }
+}
+
+/* Normal masaüstü ve dizüstü */
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .media-grid {
+    columns: 4 220px;
+  }
+}
+
+/* Küçük dizüstü ve tablet */
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns:
+      minmax(0, 1.1fr)
+      minmax(0, 0.9fr);
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 6vw, 58px);
+  }
+
+  .media-grid {
+    columns: 3 0;
+  }
+
+  .toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+
+  .search-box {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .filters {
+    min-width: 0;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  #sort-select {
+    max-width: 100%;
+  }
+}
+
+/* Telefon */
+@media (max-width: 680px) {
+  .topbar {
+    gap: 10px;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .brand-copy {
+    min-width: 0;
+  }
+
+  .hero-copy {
+    padding-top: 42px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(38px, 10vw, 56px);
+  }
+
+  .hero-actions {
+    gap: 9px;
+    flex-wrap: wrap;
+  }
+
+  .primary-button,
+  .quiet-button {
+    min-height: 44px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .filters {
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    padding-bottom: 5px;
+    scrollbar-width: thin;
+  }
+
+  .filter-button {
+    flex: 0 0 auto;
+    min-height: 40px;
+  }
+
+  .media-grid {
+    columns: 2 0;
+    column-gap: 10px;
+  }
+
+  .media-card {
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+
+  .media-visual {
+    width: 100%;
+    max-height: 440px;
+  }
+
+  .card-title {
+    overflow-wrap: anywhere;
+  }
+
+  .how-section {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .viewer {
+    padding:
+      max(52px, env(safe-area-inset-top))
+      10px
+      max(16px, env(safe-area-inset-bottom));
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+
+  .viewer-content img,
+  .viewer-content video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .viewer-details {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .viewer-title h3 {
+    max-width: 42vw;
+    overflow-wrap: anywhere;
+  }
+
+  .viewer-actions {
+    flex: 0 0 auto;
+    gap: 5px;
+  }
+
+  .mobile-nav button {
+    flex: 1;
+    min-height: 44px;
+    padding-inline: 8px;
+  }
+
+  footer {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Küçük telefonlar */
+@media (max-width: 420px) {
+  main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .topbar {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-copy strong {
+    font-size: 12px;
+  }
+
+  .brand-copy small {
+    font-size: 6px;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 10vw, 43px);
+  }
+
+  .hero-copy > p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .primary-button,
+  .quiet-button {
+    padding: 11px 12px;
+    font-size: 11px;
+  }
+
+  .filters {
+    gap: 3px;
+  }
+
+  .filter-button {
+    padding: 8px 7px;
+    font-size: 10px;
+  }
+
+  .media-grid {
+    column-gap: 7px;
+  }
+
+  .media-card {
+    margin-bottom: 7px;
+    border-radius: 8px;
+  }
+
+  .favorite-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .viewer-actions {
+    gap: 4px;
+  }
+
+  .icon-action {
+    width: 32px;
+    height: 32px;
+  }
+
+  .viewer-title h3 {
+    max-width: 38vw;
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 9px;
+  }
+}
+
+/* Çok dar ekranlar */
+@media (max-width: 350px) {
+  .brand-copy small {
+    display: none;
+  }
+
+  .media-grid {
+    columns: 1;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+  }
+
+  .hero-actions > button {
+    flex: 1 1 100%;
+  }
+
+  .viewer-details {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .viewer-actions {
+    align-self: flex-end;
+  }
+}
+
+/* Yatay telefon ekranları */
+@media (max-height: 520px) and (orientation: landscape) {
+  .viewer {
+    padding-top: 42px;
+    padding-bottom: 10px;
+  }
+
+  .viewer-content video {
+    max-height: 68dvh;
+  }
+
+  .viewer-close {
+    top: 6px;
+    right: 8px;
+  }
+
+  .hero-copy {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+/* Hareket azaltma tercihi */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
