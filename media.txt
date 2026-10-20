@@ -3,3 +3,6 @@
 # The URLs below are examples. Replace them with direct image/video file URLs.
 # https://your-host.example/garou.webp "Cosmic Garou"
 # https://your-host.example/garou-fight.mp4 "Garou Fight Scene"
+
+https://wallpapers.com/images/hd/cosmic-garou-one-punch-man-manga-m0gi49hedwbf4wzx.jpg "Cosmic Garou - Galaxy Form"
+https://pbs.twimg.com/media/Gr94x5wXIAAKixM.jpg "Cosmic Garou - Galactic Attack"
