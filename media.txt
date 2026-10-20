@@ -1,0 +1,5 @@
+# Add one media item per line:
+# URL "Display title"
+# The URLs below are examples. Replace them with direct image/video file URLs.
+# https://your-host.example/garou.webp "Cosmic Garou"
+# https://your-host.example/garou-fight.mp4 "Garou Fight Scene"
